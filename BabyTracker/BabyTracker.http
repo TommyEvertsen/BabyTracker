@@ -1,0 +1,6 @@
+@BabyTracker_HostAddress = http://localhost:5064
+
+GET {{BabyTracker_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
