@@ -4,3 +4,38 @@ GET {{BabyTracker_HostAddress}}/weatherforecast/
 Accept: application/json
 
 ###
+
+GET {{BabyTracker_HostAddress}}/api/Baby/
+Accept: application/json
+
+###
+
+GET {{BabyTracker_HostAddress}}/api/Baby/1
+Accept: application/json
+
+###
+
+POST {{BabyTracker_HostAddress}}/api/Baby/
+Content-Type: application/json
+
+{
+    "name": "Racoo",
+    "age": 2
+}
+
+###
+
+PUT {{BabyTracker_HostAddress}}/api/Baby/3
+Content-Type: application/json
+
+{
+    "id": 3,
+    "name": "Racoo 3+",
+    "age": 40
+}
+
+###
+
+DELETE {{BabyTracker_HostAddress}}/api/Baby/3
+
+###
