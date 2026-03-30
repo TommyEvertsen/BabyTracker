@@ -1,9 +1,8 @@
 @BabyTracker_HostAddress = http://localhost:5064
 
-GET {{BabyTracker_HostAddress}}/weatherforecast/
-Accept: application/json
 
-###
+
+### Baby
 
 GET {{BabyTracker_HostAddress}}/api/Baby/
 Accept: application/json
@@ -38,4 +37,41 @@ Content-Type: application/json
 
 DELETE {{BabyTracker_HostAddress}}/api/Baby/3
 
+
+
+### Tracker
+
+GET {{BabyTracker_HostAddress}}/api/Tracker/
+Accept: application/json
+
 ###
+
+GET {{BabyTracker_HostAddress}}/api/Tracker/1
+Accept: application/json
+
+###
+
+POST {{BabyTracker_HostAddress}}/api/Tracker/
+Content-Type: application/json
+
+{
+    "Milk": 100,
+    "Food": "Test",
+    "FoodAmount": 100,
+    "Poop": true
+}
+
+###
+
+PUT {{BabyTracker_HostAddress}}/api/Baby/3
+Content-Type: application/json
+
+{
+    "id": 3,
+    "name": "Racoo 3+",
+    "age": 40
+}
+
+###
+
+DELETE {{BabyTracker_HostAddress}}/api/Baby/3
