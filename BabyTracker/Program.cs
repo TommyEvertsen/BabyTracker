@@ -9,6 +9,7 @@ builder.Services.AddDbContext<BabyTrackerContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddScoped<BabyService>();
+builder.Services.AddScoped<TrackerService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
