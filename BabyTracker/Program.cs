@@ -23,6 +23,9 @@ using (var scope = app.Services.CreateScope())
     var context = scope.ServiceProvider.GetRequiredService<BabyTrackerContext>();
     context.Database.EnsureCreated();
     
+    // Ensure BabyId column exists in Trackers table
+    context.EnsureDatabaseSchema();
+    
     // Seed data if database is empty
     if (!context.Babies.Any())
     {
