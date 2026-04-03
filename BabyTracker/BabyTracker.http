@@ -9,7 +9,7 @@ Accept: application/json
 
 ###
 
-GET {{BabyTracker_HostAddress}}/api/Baby/1
+GET {{BabyTracker_HostAddress}}/api/Baby/2
 Accept: application/json
 
 ###
@@ -44,6 +44,11 @@ DELETE {{BabyTracker_HostAddress}}/api/Baby/3
 GET {{BabyTracker_HostAddress}}/api/Tracker/
 Accept: application/json
 
+
+
+###
+GET {{BabyTracker_HostAddress}}/api/Tracker/2
+
 ###
 
 GET {{BabyTracker_HostAddress}}/api/Tracker/1
@@ -55,10 +60,11 @@ POST {{BabyTracker_HostAddress}}/api/Tracker/
 Content-Type: application/json
 
 {
-    "Milk": 100,
-    "Food": "Test",
-    "FoodAmount": 100,
-    "Poop": true
+    "babyId": 1,
+    "milk": 100,
+    "food": "Test",
+    "foodAmount": 100,
+    "poop": true
 }
 
 ###
@@ -74,4 +80,38 @@ Content-Type: application/json
 
 ###
 
-DELETE {{BabyTracker_HostAddress}}/api/Baby/3
+DELETE {{BabyTracker_HostAddress}}/api/Baby/2
+
+
+
+
+### Baby with tracker
+
+POST {{BabyTracker_HostAddress}}/api/Baby/
+Content-Type: application/json
+
+{
+    "name": "NewBaby",
+    "age": 3
+}
+
+###
+
+POST {{BabyTracker_HostAddress}}/api/Tracker/
+Content-Type: application/json
+
+{
+    "babyId": 2,
+    "milk": 100,
+    "food": "Test",
+    "foodAmount": 100,
+    "poop": true
+}
+
+
+
+###
+GET {{BabyTracker_HostAddress}}/api/Baby/2
+
+###
+GET {{BabyTracker_HostAddress}}/api/Tracker/2

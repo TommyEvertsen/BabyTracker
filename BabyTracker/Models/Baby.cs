@@ -9,4 +9,7 @@ public class Baby
     [Required]
     public required string Name {get; set;}
     public required int Age {get; set;}
+    
+
+    public Tracker? Tracker {get; set;}
 }
